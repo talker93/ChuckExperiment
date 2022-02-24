@@ -10,7 +10,7 @@ Official Examples can be found at:
 
 API can be found at:
 
-> https://chuck.cs.princeton.edu/doc/program/stdlib.html
+> https://chuck.cs.princeton.edu/doc/program/stdlib.html > https://chuck.cs.princeton.edu/doc/language/
 
 A cheetsheet on Canvas:
 
