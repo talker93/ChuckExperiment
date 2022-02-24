@@ -37,25 +37,25 @@
 
 
 // write some stuff
-FileIO fout;
+// FileIO fout;
 
-// open for write
-fout.open( "out.txt", FileIO.WRITE );
+// // open for write
+// fout.open( "out.txt", FileIO.WRITE );
 
-// test
-if( !fout.good() )
-{
-    cherr <= "can't open file for writing..." <= IO.newline();
-    me.exit();
-}
+// // test
+// if( !fout.good() )
+// {
+//     cherr <= "can't open file for writing..." <= IO.newline();
+//     me.exit();
+// }
 
-// write some stuff
-fout <= 1 <= " " <= 2 <= " " <= "foo" <= IO.newline();
+// // write some stuff
+// fout <= 1 <= " " <= 2 <= " " <= "foo" <= IO.newline();
 
-fout <= 3 <= " " <= 4 <= " " <= "box" <= IO.newline();
+// fout <= 3 <= " " <= 4 <= " " <= "box" <= IO.newline();
 
-// close the thing
-fout.close();
+// // close the thing
+// fout.close();
 
 // computer key input, with sound
 // KBHit kb;
@@ -89,3 +89,38 @@ fout.close();
 //     if(c == 110) {<<<"You choose No? Press Enter key to confirm.">>>;}
 //     if(c == 10) break;
 // }
+
+
+Hid hi;
+HidMsg msg;
+
+// which keyboard
+0 => int device;
+// get from command line
+if( me.args() ) me.arg(0) => Std.atoi => device;
+
+// open keyboard (get device number from command line)
+if( !hi.openKeyboard( device ) ) me.exit();
+<<< "keyboard '" + hi.name() + "' ready", "" >>>;
+
+// infinite event loop
+while( true )
+{
+    // wait on event
+    // hi => now;
+
+    // get one or more messages
+    while( 1 )
+    {
+        // check for action type
+        if( msg.isButtonDown() )
+        {
+            <<< "down:", msg.which, "(code)", msg.key, "(usb key)", msg.ascii, "(ascii)" >>>;
+        }
+        
+        else
+        {
+            // <<< "up:", msg.which, "(code)", msg.key, "(usb key)", msg.ascii, "(ascii)" >>>;
+        }
+    }
+}
