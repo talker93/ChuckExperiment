@@ -3,7 +3,6 @@ SinOsc sinewave => dac;
 20 => sinewave.freq;
 
 1.0 => float d;
-2.0 => float c;
 
 <<< Math.sqrt( 2.0 ) >>>;
 <<< Math.sin( Math.PI / 2.0) >>>;
