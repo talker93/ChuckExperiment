@@ -9,3 +9,7 @@ Official Examples can be found at:
 API can be found at:
 > https://chuck.cs.princeton.edu/doc/program/stdlib.html
 
+A cheetsheet on Canvas:
+> https://chuck.cs.princeton.edu/doc/program/stdlib.html
+
+
