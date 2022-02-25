@@ -1,15 +1,6 @@
 
 // Question: whether the magnitude of last interval was bigger or not?
 
-// ### Group 1 variable: changing rate
-
-// 1. Sound: normal -> big, rate: 10%
-// 2. Sound: normal -> big, rate: 20%
-// 3. Sound: normal -> big, rate: 50%
-// 4. Sound: normal -> small, rate: 10%
-// 5. Sound: normal -> small, rate: 20%
-// 6. Sound: normal -> small, rate: 50%
-
 /////////////////// keyboard input function/////////////////
 fun float keyInput(float in1, float in2, float in3) {
     KBHit kb;
